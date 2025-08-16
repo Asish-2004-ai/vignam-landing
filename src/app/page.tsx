@@ -53,7 +53,7 @@ export default function Page() {
         {/* New Grid API (v7): no `item`, pass xs/md directly */}
         <Grid container spacing={3}>
           {[1, 2, 3].map((num) => (
-            <Grid xs={12} md={4} key={num}>
+            <Grid item xs={12} md={4} key={num}>
               <Card
                 sx={{
                   height: '100%',

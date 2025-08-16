@@ -156,7 +156,7 @@ export default function Hero3D() {
           <Canvas
             camera={{ position: cameraPos, fov }}
             dpr={[1, 2]}
-            gl={{ antialias: true, physicallyCorrectLights: true }}
+            gl={{ antialias: true }}
           >
             <Suspense fallback={<Loader />}>
               <SceneEnvironment exrPath="/env/metal.exr" intensity={1.2} />
