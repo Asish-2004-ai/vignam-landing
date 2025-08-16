@@ -8,7 +8,6 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, useGLTF, useProgress, Html, Environment, useAnimations } from '@react-three/drei';
 import * as THREE from 'three';
 import { EXRLoader } from 'three/examples/jsm/loaders/EXRLoader.js';
-import Loader from './Loader';
 
 // If you setup Draco, uncomment and configure this block in your entry file or here
 // import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
@@ -158,7 +157,7 @@ export default function Hero3D() {
             dpr={[1, 2]}
             gl={{ antialias: true }}
           >
-            <Suspense fallback={<Loader />}>
+            <Suspense>
               <SceneEnvironment exrPath="/env/metal.exr" intensity={1.2} />
               <ambientLight intensity={0.4} />
               <directionalLight position={[2, 2, 3]} intensity={0.6} />
